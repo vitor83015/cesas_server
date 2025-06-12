@@ -140,25 +140,25 @@ export const generateStudentPdf = async (student) => {
     // === Demais campos, sempre com fonte OpenSans ===
     const yesNo = (bool) => (bool ? "Sim" : "Não");
 
-    doc.text(`Já foi estudante: ${yesNo(student.legacyStudent)}`);
-    doc.text(`Tem problemas de saúde?: ${yesNo(student.disabledStudent)}`);
-    doc.text(`Necessita de exame de classificação ou reclassificação? ${yesNo(student.recordlessStudent)}`);
-    if (student.socialName) doc.text(`Nome social: ${student.socialName}`);
+    doc.text(`Já foi estudante: ${yesNo(student.legacyStudent)}`, { lineGap: 6 });
+    doc.text(`Tem problemas de saúde?: ${yesNo(student.disabledStudent)}`, { lineGap: 6 });
+    doc.text(`Necessita de exame de classificação ou reclassificação? ${yesNo(student.recordlessStudent)}`, { lineGap: 6 });
+    if (student.socialName) doc.text(`Nome social: ${student.socialName}`, { lineGap: 6 });
 
-    doc.text(`Nacionalidade: ${student.nationality}`);
-    doc.text(`Estado: ${student.state}`);
-    doc.text(`Número do RG: ${student.idNumber}`);
-    doc.text(`Data de expedição do RG: ${student.idExpDate}`);
-    doc.text(`Órgão de expedição do RG: ${student.idIssuingBody}`);
-    doc.text(`Raça/Etnia: ${student.ethnicity}`);
-    doc.text(`CEP: ${student.cep}`);
-    doc.text(`Endereço: ${student.address}`);
-    doc.text(`Celular: ${student.cellphoneNumber}`);
-    doc.text(`Telefone: ${student.landlinePhone}`);
-    doc.text(`Telefone de emergência: ${student.emergencyPhone}`);
-    doc.text(`Nome do responsável: ${student.responsibleName}`);
-    doc.text(`RG do responsável: ${student.responsibleId}`);
-    doc.text(`Gênero: ${student.gender}`);
+    doc.text(`Nacionalidade: ${student.nationality}`, { lineGap: 6 });
+    doc.text(`Estado: ${student.state}`, { lineGap: 6 });
+    doc.text(`Número do RG: ${student.idNumber}`, { lineGap: 6 });
+    doc.text(`Data de expedição do RG: ${student.idExpDate}`, { lineGap: 6 });
+    doc.text(`Órgão de expedição do RG: ${student.idIssuingBody}`, { lineGap: 6 });
+    doc.text(`Raça/Etnia: ${student.ethnicity}`, { lineGap: 6 });
+    doc.text(`CEP: ${student.cep}`, { lineGap: 6 });
+    doc.text(`Endereço: ${student.address}`, { lineGap: 6 });
+    doc.text(`Celular: ${student.cellphoneNumber}`, { lineGap: 6 });
+    doc.text(`Telefone: ${student.landlinePhone}`, { lineGap: 6 });
+    doc.text(`Telefone de emergência: ${student.emergencyPhone}`, { lineGap: 6 });
+    doc.text(`Nome do responsável: ${student.responsibleName}`, { lineGap: 6 });
+    doc.text(`RG do responsável: ${student.responsibleId}`, { lineGap: 6 });
+    doc.text(`Gênero: ${student.gender}`, { lineGap: 6 });
 
     doc.moveDown();
 
